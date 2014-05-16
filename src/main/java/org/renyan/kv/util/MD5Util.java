@@ -4,10 +4,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Static functions to simplifiy common {@link java.security.MessageDigest} tasks.  This
- * class is thread safe.
+ * MD5 util
  */
-public class MD5Util {
+public final class MD5Util {
     private static final String HEX_CHARS = "0123456789abcdef";
 
     private MD5Util() {
@@ -20,7 +19,6 @@ public class MD5Util {
      * @throws RuntimeException when a {@link java.security.NoSuchAlgorithmException} is
      *                          caught
      */
-
     static MessageDigest getDigest() {
         try {
             return MessageDigest.getInstance("MD5");
